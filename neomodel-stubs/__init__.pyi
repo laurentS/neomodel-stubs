@@ -1,6 +1,6 @@
 # Stubs for neomodel (Python 3)
 
-from . import (cardinality, core, properties, relationship,
+from . import (cardinality, core, exceptions, properties, relationship,
                relationship_manager, util)
 
 __email__: str
@@ -32,3 +32,20 @@ RelationshipTo = relationship_manager.RelationshipTo
 
 change_neo4j_password = util.change_neo4j_password
 clear_neo4j_database = util.clear_neo4j_database
+
+# Exceptions
+AttemptedCardinalityViolation = exceptions.AttemptedCardinalityViolation
+CardinalityViolation = exceptions.CardinalityViolation
+ClassAlreadyDefined = exceptions.ClassAlreadyDefined
+ConstraintValidationFailed = exceptions.ConstraintValidationFailed
+DeflateConflict = exceptions.DeflateConflict
+DeflateError = exceptions.DeflateError
+DoesNotExist = exceptions.DoesNotExist
+InflateConflict = exceptions.InflateConflict
+InflateError = exceptions.InflateError
+ModelDefinitionMismatch = exceptions.ModelDefinitionMismatch
+MultipleNodesReturned = exceptions.MultipleNodesReturned
+NeomodelException = exceptions.NeomodelException
+NotConnected = exceptions.NotConnected
+RequiredProperty = exceptions.RequiredProperty
+UniqueProperty = exceptions.UniqueProperty
