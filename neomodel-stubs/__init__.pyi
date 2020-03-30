@@ -16,6 +16,7 @@ db = core.db
 install_all_labels = core.install_all_labels
 remove_all_labels = core.remove_all_labels
 
+AliasProperty = properties.AliasProperty
 ArrayProperty = properties.ArrayProperty
 BooleanProperty = properties.BooleanProperty
 DateProperty = properties.DateProperty
