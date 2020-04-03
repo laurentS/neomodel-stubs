@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Typing stubs for neomodel"
 authors = ["Laurent Savaete <laurent@where.tf>"]
 packages = [
-    { include = "neomodel-stubs/**/*.pyi" },
+    { include = "neomodel-stubs" },
 ]
 
 [tool.poetry.dependencies]
