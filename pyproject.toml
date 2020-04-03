@@ -3,6 +3,9 @@ name = "neomodel-stubs"
 version = "0.1.0"
 description = "Typing stubs for neomodel"
 authors = ["Laurent Savaete <laurent@where.tf>"]
+packages = [
+    { include = "neomodel-stubs/**/*.pyi" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"
