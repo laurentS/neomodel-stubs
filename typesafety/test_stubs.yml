@@ -1,0 +1,26 @@
+- case: test_structured_node
+  main: |
+    from mymodels import Person
+
+    jim = Person()
+
+    reveal_type(jim)  # N: Revealed type is 'mymodels.Person'
+    reveal_type(jim.name)  # N: Revealed type is 'builtins.str*'
+    reveal_type(jim.age)  # N: Revealed type is 'builtins.int*'
+    reveal_type(jim.country)  # N: Revealed type is 'mymodels.Country'
+    # the line above fails
+  files:
+    - path: mymodels.py
+      content: |
+        from neomodel import (StructuredNode, IntegerProperty, StringProperty,
+            RelationshipTo, UniqueIdProperty)
+
+        class Country(StructuredNode):
+            code = StringProperty()
+
+        class Person(StructuredNode):
+            uid = UniqueIdProperty()
+            name = StringProperty(unique_index=True)
+            age = IntegerProperty(index=True, default=0)
+
+            country = RelationshipTo(Country, "IS_FROM")
