@@ -9,10 +9,10 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.6"
-pytest-mypy-plugins = "^1.2.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+pytest-mypy-plugins = "^1.2.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
