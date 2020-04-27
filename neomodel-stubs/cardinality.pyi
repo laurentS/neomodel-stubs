@@ -3,11 +3,14 @@
 
 from typing import Any, Dict, List, Optional
 
+# this looks weird, but mypy complains if written in a more usual way
+from neomodel import relationship_manager
 from neomodel.relationship_manager import RelationshipManager
 
 from .core import StructuredNode
 from .relationship import StructuredRel
 
+ZeroOrMore = relationship_manager.ZeroOrMore
 
 class ZeroOrOne(RelationshipManager):
     description: str = ...
